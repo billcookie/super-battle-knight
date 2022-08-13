@@ -7,3 +7,15 @@
 <% end %>
 
 <%= link_to "MAKE CHARACTER", new_character_path  %>
+
+<div class="container">
+  <div class="cards">
+    <% @characters.each do |character| %>
+      <%= link_to character_path(character) do %>
+        <div class="card-category zoom" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= character.photo.attached? ? cl_image_path(character.photo.key) : 'http://source.unsplash.com/featured/?warrior' %>)">
+          <%= character.name %>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+</div>
