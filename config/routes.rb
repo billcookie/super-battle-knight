@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
-  root to: "pages#home"
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-
-  # Defines the root path route ("/")
-  # root "articles#index"
+  root to: "characters#index"
+  resources :characters, only: [:show, :new, :create] do
+    resources :obligations, only: [:new, :create]
+  end
+  resources "battles", only: [:new, :create, :index, :show]
 end

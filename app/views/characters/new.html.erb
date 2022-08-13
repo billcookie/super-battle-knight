@@ -1,0 +1,10 @@
+<h1>Characters#new</h1>
+<p>Find me in app/views/characters/new.html.erb</p>
+
+<%= simple_form_for(@character) do |f| %>
+  <%= f.input :name %>
+  <%= f.input :age %>
+  <%= f.input :ranking %>
+  <%= f.input :bio %>
+  <%= f.submit class: 'btn btn-primary mt-3' %>
+<% end %>

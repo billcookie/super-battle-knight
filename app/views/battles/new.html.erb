@@ -1,0 +1,9 @@
+<h1>Battles#new</h1>
+<p>Find me in app/views/battles/new.html.erb</p>
+<%= simple_form_for(@battle) do |f| %>
+  <%= f.input :title %>
+  <%= f.input :fight_date %>
+  <%= f.input :location %>
+  <%= f.input :result %>
+  <%= f.submit class: 'btn btn-primary mt-3' %>
+<% end %>

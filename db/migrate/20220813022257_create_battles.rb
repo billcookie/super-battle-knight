@@ -4,7 +4,7 @@ class CreateBattles < ActiveRecord::Migration[7.0]
       t.string :title
       t.integer :fight_date
       t.string :location
-      t.boolean :result
+      t.boolean :result, default: false
 
       t.timestamps
     end

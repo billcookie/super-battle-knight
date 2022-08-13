@@ -1,0 +1,9 @@
+<h1>Battles#index</h1>
+<p>Find me in app/views/battles/index.html.erb</p>
+<% @battles.each do |battle| %>
+  <ul>
+    <%= battle.title %>
+  </ul>
+<% end %>
+
+<%= link_to "MAKE BATTLE", new_battle_path  %>

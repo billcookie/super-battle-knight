@@ -10,8 +10,38 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 0) do
+ActiveRecord::Schema[7.0].define(version: 2022_08_13_023209) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "battles", force: :cascade do |t|
+    t.string "title"
+    t.integer "fight_date"
+    t.string "location"
+    t.boolean "result", default: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "characters", force: :cascade do |t|
+    t.string "name"
+    t.integer "age"
+    t.string "ranking"
+    t.text "bio"
+    t.string "img_url"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "obligations", force: :cascade do |t|
+    t.bigint "character_id", null: false
+    t.bigint "battle_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["battle_id"], name: "index_obligations_on_battle_id"
+    t.index ["character_id"], name: "index_obligations_on_character_id"
+  end
+
+  add_foreign_key "obligations", "battles"
+  add_foreign_key "obligations", "characters"
 end
