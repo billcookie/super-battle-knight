@@ -1,2 +1,9 @@
 <h1>Obligations#new</h1>
 <p>Find me in app/views/obligations/new.html.erb</p>
+<div class="container">
+  <%= simple_form_for [@character, @obligation] do |f| %>
+    <%= f.association :character %>
+    <%= f.association :battle %>
+    <%= f.submit class: 'btn btn-primary mt-3' %>
+  <% end %>
+</div>

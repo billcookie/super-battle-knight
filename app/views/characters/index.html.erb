@@ -2,7 +2,7 @@
 <p>Find me in app/views/characters/index.html.erb</p>
 <% @characters.each do |character| %>
   <ul>
-    <%= character.name %>
+    <%= link_to character.name, character_path(character)  %>
   </ul>
 <% end %>
 

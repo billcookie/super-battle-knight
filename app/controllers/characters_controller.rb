@@ -1,10 +1,12 @@
 class CharactersController < ApplicationController
+
   def index
     @characters = Character.all
   end
 
   def show
     @character = Character.find(params[:id])
+    @obligations = @character.obligations
   end
 
   def new

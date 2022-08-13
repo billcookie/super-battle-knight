@@ -3,5 +3,7 @@ Rails.application.routes.draw do
   resources :characters, only: [:show, :new, :create] do
     resources :obligations, only: [:new, :create]
   end
-  resources "battles", only: [:new, :create, :index, :show]
+  resources :battles, only: [:new, :create, :index, :show] do
+    resources :obligations, only: [:new, :create]
+  end
 end

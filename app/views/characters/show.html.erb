@@ -1,2 +1,9 @@
 <h1>Characters#show</h1>
 <p>Find me in app/views/characters/show.html.erb</p>
+<%= @character.name %>
+
+<% @character.obligations.each do |obligation| %>
+<ul>
+  <%= obligation.battle.title %>
+</ul>
+<% end %>
