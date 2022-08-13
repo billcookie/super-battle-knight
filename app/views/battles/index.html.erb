@@ -1,9 +1,13 @@
-<h1>Battles#index</h1>
-<p>Find me in app/views/battles/index.html.erb</p>
-<% @battles.each do |battle| %>
-  <ul>
-    <%= battle.title %>
-  </ul>
-<% end %>
+<div class="container">
+  <div class="cards">
+    <% @battles.each do |battle| %>
+      <%= link_to battle_path(battle) do %>
+        <div class="card-category zoom" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('http://source.unsplash.com/featured/pe><%= battle.location %>')">
+          <%= battle.title %>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+</div>
 
 <%= link_to "MAKE BATTLE", new_battle_path  %>
