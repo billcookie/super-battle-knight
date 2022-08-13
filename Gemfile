@@ -48,6 +48,7 @@ gem "sassc-rails"
 # added
 
 gem 'cloudinary', '~> 1.16.0'
+gem 'geocoder'
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
