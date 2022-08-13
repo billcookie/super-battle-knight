@@ -2,7 +2,7 @@
   <div class="flip-card">
     <div class="flip-card-inner">
       <div class="flip-card-front">
-        <%= @character.photo.key, alt: "Character photo", width: 200, height: 300 %>
+        <%= image_tag @character.photo.key, alt: "Character photo", width: 200, height: 300 %>
       </div>
       <div class="flip-card-back">
         <h1><%= character.name%></h1>
@@ -12,11 +12,13 @@
       </div>
     </div>
   </div>
+
+
   <% @character.obligations.each do |obligation| %>
     <div class="flip-card">
       <div class="flip-card-inner">
         <div class="flip-card-front">
-          <%= @character.photo.key, alt: "Character photo", width: 200, height: 300 %>
+          <%= image_tag (@character.photo.key), alt: "Character photo", width: 200, height: 300 %>
         </div>
         <div class="flip-card-back">
           <h1><%= obligation.battle.title%></h1>
