@@ -1,31 +1,29 @@
 <div class="container">
   <div class="flip-card">
     <div class="flip-card-inner">
-      <div class="flip-card-front">
-        <%= image_tag @character.photo.key, alt: "Character photo", width: 200, height: 300 %>
+      <div class="flip-card-front" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= @character.photo.attached? ? cl_image_path(@character.photo.key) : 'http://source.unsplash.com/featured/?warrior' %>)">
       </div>
       <div class="flip-card-back">
-        <h1><%= character.name%></h1>
-        <p><%= character.age %></p>
-        <p><%= character.ranking%></p>
-        <p><%= character.bio %></p>
+        <h1><%= @character.name%></h1>
+        <p><%= @character.age %></p>
+        <p><%= @character.ranking%></p>
+        <p><%= @character.bio %></p>
       </div>
     </div>
   </div>
 
-
   <% @character.obligations.each do |obligation| %>
     <div class="flip-card">
       <div class="flip-card-inner">
-        <div class="flip-card-front">
-          <%= image_tag (@character.photo.key), alt: "Character photo", width: 200, height: 300 %>
+        <div class="flip-card-front" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= character.photo.attached? ? cl_image_path(@character.photo.key) : 'http://source.unsplash.com/featured/?warrior' %>)">
         </div>
         <div class="flip-card-back">
-          <h1><%= obligation.battle.title%></h1>
-          <p><%= obligation.battle.fight_date %></p>
-          <p><%= obligation.battle.location %></p>
+          <div class="flip-card-back">
+            <h1><%= obligation.battle.title%></h1>
+            <p><%= obligation.battle.fight_date %></p>
+            <p><%= obligation.battle.location %></p>
+          </div>
         </div>
       </div>
-    </div>
-  <% end %>
-</div>
+    <% end %>
+  </div>
