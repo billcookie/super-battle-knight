@@ -1,34 +1,23 @@
-<h1>Battles#show</h1>
-<p>Find me in app/views/battles/show.html.erb</p>
-
-<ul>
-
-<%= @battle.title %>
-<%=  %>
-<%=  %>
-<%= @battle.result %>
-
-</ul>
-
-
-
-<div class="container d-flex justify-content-center">
-  <div class="flip-card">
-    <div class="flip-card-inner">
-      <div class="flip-card-front" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('http://source.unsplash.com/featured/?battle')">
-      </div>
-      <div class="flip-card-back">
-        <h1><%= @battle.title%></h1>
-        <p><%= @battle.fight_date %></p>
-        <p><%= @battle.location%></p>
+<div class="container text-center">
+    <h1><%= @battle.title%></h1>
+    <div class="d-flex justify-content-between">
+      <div class="flex-card"><%= @battle.fight_date %></p>
+    </div>
+      <div class="flex-card">
+        <p><%= @battle.location %></p>
       </div>
     </div>
-  </div>
 </div>
-<div class="container text-center">
-  <% @battle.obligations.each do |obligation| %>
-    <div class="card-category zoom" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(url(<%= obligation.character.photo.attached? ? cl_image_path(obligation.character.photo.key,crop: :thumb,gravity: :face) : 'http://source.unsplash.com/featured/?warrior' %>)">
-          <%= obligation.character.name %>
-        </div>
-  <% end %>
+
+<div class="text-center">
+  <h2>Characters!</h2>
+</div>
+<div class="container">
+  <div class="cards">
+    <% @battle.obligations.each do |obligation| %>
+      <div class="card-category zoom" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(url(<%= obligation.character.photo.attached? ? cl_image_path(obligation.character.photo.key,crop: :thumb,gravity: :face) : 'http://source.unsplash.com/featured/?warrior' %>)">
+        <%= obligation.character.name %>
+      </div>
+    <% end %>
+  </div>
 </div>

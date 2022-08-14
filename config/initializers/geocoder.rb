@@ -26,6 +26,6 @@ Geocoder.configure(
   # }
 
   Geocoder.configure(
-    api_key: "pk.eyJ1IjoiYmlsbGNvb2tpZSIsImEiOiJjbDZlbWY0NzkwYnB3M2pwaGxpY3h6Y29lIn0.EgXKFMvOwPGLMiY84leqvA"
+    api_key: "YOUR_KEY"
   )
 )

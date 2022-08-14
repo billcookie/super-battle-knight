@@ -1,4 +1,4 @@
-<%= link_to "Create new obligation", new_character_obligation_path(@character) %>
+
 <div class="container d-flex justify-content-center">
   <div class="flip-card">
     <div class="flip-card-inner">
@@ -6,14 +6,20 @@
       </div>
       <div class="flip-card-back">
         <h1><%= @character.name%></h1>
+        <h3>Age:</h3>
         <p><%= @character.age %></p>
+        <h3>Ranking:</h3>
         <p><%= @character.ranking%></p>
+        <h3>Bio:</h3>
         <p><%= @character.bio %></p>
+        <%= link_to "Create new obligation", new_character_obligation_path(@character), class: 'btn btn-primary mt-3' %>
       </div>
     </div>
   </div>
 </div>
+
 <div class="container text-center">
+  <h2>Battle Obligations</h2>
   <% @character.obligations.each do |obligation| %>
     <h1><%= obligation.battle.title%></h1>
     <div class="d-flex justify-content-between">
