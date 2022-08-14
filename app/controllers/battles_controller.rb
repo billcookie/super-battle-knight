@@ -23,6 +23,6 @@ class BattlesController < ApplicationController
   private
 
   def battle_params
-    params.require(:battle).permit(:title, :fight_date, :location, :result)
+    params.require(:battle).permit(:title, :fight_date, :location, :result, :photo)
   end
 end

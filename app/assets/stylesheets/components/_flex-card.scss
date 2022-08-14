@@ -1,5 +1,31 @@
 .flex-card {
   color: white;
-  padding: 50px;
-  border: solid 1px black;
+  padding: 15px;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  overflow: hidden;
+  background: rgb(35, 35, 35);
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+
+
+}
+
+
+.flex-card .map-form-btn {
+  margin: auto;
+  color: white;
+  padding: 8px 24px;
+  border-radius: 4px;
+  background: #670BFF;
+  transition: background 0.3s ease;
+
+}
+
+
+
+#map {
+  margin: auto;
+  border-radius: 5px;
 }

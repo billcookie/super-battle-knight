@@ -2,16 +2,14 @@
   <link href="https://api.mapbox.com/mapbox-gl-js/v1.11.1/mapbox-gl.css" rel="stylesheet">
 </head>
 <div class="container text-center">
-  <h1><%= @battle.title%></h1>
-  <div class="d-flex justify-content-between">
-    <div class="flex-card"><%= @battle.fight_date %></p>
-  </div>
-  <div class="flex-card">
+  <div class="flex-card d-flex flex-column justify-items-center">
+    <h1><%= @battle.title%></h1>
+    <h3><%= @battle.fight_date %></h3>
     <p><%= @battle.location %></p>
-    <div class="container" data-controller="get-all-addresses">
-      <form class="d-flex my-5">
-        <input type="hidden" id="custId" name="custId" value=<%=@battle.location%> data-get-all-addresses-target="address">
-        <input class="map-form-tn" type="submit" value="Show location" class="btn btn-primary" data-action="click->get-all-addresses#geocodeSubmit">
+    <div class="container form-submission" data-controller="get-all-addresses">
+      <form>
+        <input class="form-control" type="hidden" id="custId" name="custId" value=<%=@battle.location%> data-get-all-addresses-target="address">
+        <input class="map-form-btn" type="submit" value="Show location" class="btn btn-primary" data-action="click->get-all-addresses#geocodeSubmit">
       </form>
       <div id="map" style="height: 300px; width: 600px">
         <!-- Display the map in this div -->
@@ -20,8 +18,9 @@
   </div>
 </div>
 </div>
+</div>
 <div class="text-center">
-  <h2>Characters!</h2>
+  <h2>Participants</h2>
 </div>
 <div class="container">
   <div class="cards">

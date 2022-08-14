@@ -1,6 +1,6 @@
-<div class="banner banner-alt" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1579803815615-1203fb5a2e9d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8bW92aWV8fHx8fHwxNjYwMjgzMTg2&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1080);">
+<div class="banner banner-alt" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://www.aiatucson.arizona.edu/sites/aiatucson.arizona.edu/files/Alexander%20Mosaic.jpg);">
   <div class="container">
-    <h1>Characters</h1>
+    <h1>Battles</h1>
     <h3>We must all do battle someday!</h3>
     <%= link_to "MAKE BATTLE", new_battle_path, class: 'btn btn-danger mt-3'%>
   </div>
@@ -9,7 +9,7 @@
   <div class="cards">
     <% @battles.each do |battle| %>
       <%= link_to battle_path(battle) do %>
-        <div class="card-category zoom" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('http://source.unsplash.com/featured/pe><%= battle.location %>')">
+        <div class="card-category zoom" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= battle.photo.attached? ? cl_image_path(battle.photo.key,crop: :thumb,gravity: :face) : 'http://source.unsplash.com/featured/?battle' %>)">
           <%= battle.title %>
         </div>
       <% end %>
