@@ -1,8 +1,8 @@
-<div class="text-center">
+<div class="text-center form-styles">
   <h1>New Obligation</h1>
   <p>Who will join the fight and help in battle!</p>
 </div>
-<div class="container">
+<div class="container form-styles">
   <%= simple_form_for [@character, @obligation] do |f| %>
     <%= f.association :character %>
     <%= f.association :battle %>

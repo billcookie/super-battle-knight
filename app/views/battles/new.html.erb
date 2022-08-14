@@ -1,9 +1,13 @@
-<div class="container">
+
+<div class="text-center form-styles">
+  <h1>New Battle</h1>
+  <p>Where is the next battle at?</p>
+</div>
+<div class="container form-styles">
   <%= simple_form_for(@battle) do |f| %>
     <%= f.input :title %>
     <%= f.input :fight_date %>
     <%= f.input :location %>
-    <%= f.input :result %>
     <%= f.input :photo, as: :file %>
     <%= f.submit class: 'btn btn-primary mt-3' %>
   <% end %>

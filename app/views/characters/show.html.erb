@@ -1,19 +1,20 @@
-
-<div class="container d-flex justify-content-center">
-  <div class="flip-card">
-    <div class="flip-card-inner">
-      <div class="flip-card-front">
+<div class="container">
+  <div class="d-flex justify-content-center">
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
           <%= image_tag @character.photo.attached? ? cl_image_path(@character.photo.key,width: 400 ,height: 600,crop: :thumb,gravity: :face) : 'http://source.unsplash.com/featured/?warrior'%>
         </div>
-      <div class="flip-card-back">
-        <h1><%= @character.name%></h1>
-        <h3>Age:</h3>
-        <p><%= @character.age %></p>
-        <h3>Ranking:</h3>
-        <p><%= @character.ranking%></p>
-        <h3>Bio:</h3>
-        <p><%= @character.bio %></p>
-        <%= link_to "Create new obligation", new_character_obligation_path(@character), class: 'btn btn-primary mt-3' %>
+        <div class="flip-card-back">
+          <h1><%= @character.name%></h1>
+          <h3>Age:</h3>
+          <p><%= @character.age %></p>
+          <h3>Ranking:</h3>
+          <p><%= @character.ranking%></p>
+          <h3>Bio:</h3>
+          <p><%= @character.bio %></p>
+          <%= link_to "Create new obligation", new_character_obligation_path(@character), class: 'btn btn-primary mt-3' %>
+        </div>
       </div>
     </div>
   </div>

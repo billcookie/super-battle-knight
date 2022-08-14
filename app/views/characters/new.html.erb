@@ -1,7 +1,8 @@
-<h1>New Character</h1>
-<p>Who will you add to join the fight?</p>
-
-<div class="container">
+<div class="text-center form-styles">
+  <h1>New Character</h1>
+  <p>Who will you add to join the fight?</p>
+</div>
+<div class="container form-styles">
   <%= simple_form_for(@character) do |f| %>
     <%= f.input :name %>
     <%= f.input :age %>
