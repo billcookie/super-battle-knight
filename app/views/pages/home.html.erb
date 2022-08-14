@@ -5,21 +5,16 @@
   </div>
 </div>
 <div class="container">
-<div class="d-flex justify-content-between">
-  <%= link_to characters_path do %>
-    <div class="card-category zoom" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(http://source.unsplash.com/featured/?movie)">
-      Characters
-    </div>
-  <% end %>
-  <%= link_to characters_path do %>
-    <div class="card-category zoom" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(http://source.unsplash.com/featured/?movie)">
-
-    </div>
-  <% end %>
-  <%= link_to battles_path do %>
-    <div class="card-category zoom" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(http://source.unsplash.com/featured/?movie)">
-      Battles
-    </div>
-  <% end %>
-</div>
+  <div class="d-flex justify-content-around">
+    <%= link_to characters_path do %>
+      <div class="card-category zoom" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://cdna.artstation.com/p/assets/images/images/009/255/062/large/woong-bae-byun-knight.jpg?1517954885)">
+        Characters
+      </div>
+    <% end %>
+    <%= link_to battles_path do %>
+      <div class="card-category zoom" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://media.istockphoto.com/photos/medieval-battle-scene-with-cavalry-and-infantry-silhouettes-of-as-picture-id924589584?k=20&amp;m=924589584&amp;s=612x612&amp;w=0&amp;h=qIly_DWt5LUzHBaoOgOaVPnqQx9jh9C3VszDw6bReEQ=)">
+        Battles
+      </div>
+    <% end %>
+  </div>
 </div>
