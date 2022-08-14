@@ -8,6 +8,15 @@
   </div>
   <div class="flex-card">
     <p><%= @battle.location %></p>
+    <div class="container" data-controller="get-all-addresses">
+      <form class="d-flex my-5">
+        <input type="hidden" id="custId" name="custId" value=<%=@battle.location%> data-get-all-addresses-target="address">
+        <input class="map-form-tn" type="submit" value="Show location" class="btn btn-primary" data-action="click->get-all-addresses#geocodeSubmit">
+      </form>
+      <div id="map" style="height: 300px; width: 600px">
+        <!-- Display the map in this div -->
+      </div>
+    </div>
   </div>
 </div>
 </div>
@@ -21,14 +30,5 @@
         <%= obligation.character.name %>
       </div>
     <% end %>
-  </div>
-</div>
-<div class="container" data-controller="get-all-addresses">
-  <form class="d-flex my-5">
-    <input type="text" class="form-control flex-grow-1 me-2" placeholder="Type an address" data-get-all-addresses-target="address">
-    <input type="submit" value="Geocode!" class="btn btn-primary" data-action="click->get-all-addresses#geocodeSubmit">
-  </form>
-  <div id="map" style="height: 300px; width: 600px">
-    <!-- Display the map in this div -->
   </div>
 </div>
