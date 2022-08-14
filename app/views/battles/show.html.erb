@@ -15,9 +15,9 @@
 <div class="container">
   <div class="cards">
     <% @battle.obligations.each do |obligation| %>
-      <div class="card-category zoom" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(url(<%= obligation.character.photo.attached? ? cl_image_path(obligation.character.photo.key,crop: :thumb,gravity: :face) : 'http://source.unsplash.com/featured/?warrior' %>)">
-        <%= obligation.character.name %>
-      </div>
+        <div class="card-category zoom" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= obligation.character.photo.attached? ? cl_image_path(obligation.character.photo.key,crop: :thumb,gravity: :face) : 'http://source.unsplash.com/featured/?warrior' %>)">
+          <%= obligation.character.name %>
+        </div>
     <% end %>
   </div>
 </div>
