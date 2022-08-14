@@ -4,6 +4,9 @@
 
 import { application } from "./application"
 
+import GetAllAddressesController from "./get_all_addresses_controller"
+application.register("get-all-addresses", GetAllAddressesController)
+
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)
 
