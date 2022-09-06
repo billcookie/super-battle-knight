@@ -4,7 +4,7 @@ An app practing N:N relationships and MVC development.
 
 
 <br>
-App home: https://tokyo-vinyls.herokuapp.com/
+App home: super-battle-knight.herokuapp.com
    
 
 ## Getting Started
