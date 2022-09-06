@@ -1,4 +1,4 @@
-# 📚 Super Battle Knight
+# ♘ Super Battle Knight
 
 An app practing N:N relationships and MVC development.
 
