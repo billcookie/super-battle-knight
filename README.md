@@ -1,6 +1,6 @@
 # ♘ Super Battle Knight
 
-An app practing N:N relationships and MVC development.
+An app practicing N:N relationships and MVC development.
 
 
 <br>
