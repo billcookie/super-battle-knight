@@ -4,7 +4,7 @@ An app practicing N:N relationships and MVC development.
 
 
 <br>
-App home: super-battle-knight.herokuapp.com
+App home: https://super-battle-knight.fly.dev/
    
 
 ## Getting Started
